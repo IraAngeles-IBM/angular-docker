@@ -10,6 +10,6 @@ RUN npm run build --prod
 ### STAGE 2: Run ###
 FROM node:14-alpine
 WORKDIR /app
-COPY --from=build ./dist .
+COPY --from=build /app/dist .
 RUN npm install -g @angular/cli
 CMD ng serve --disable-host-check
