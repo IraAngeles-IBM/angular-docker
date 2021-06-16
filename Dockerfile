@@ -16,4 +16,5 @@ WORKDIR /app
 COPY --from=build /app /app
 RUN npm install -g @angular/cli
 # EXPOSE 4200
-CMD ["ng", "serve", "--disable-host-check"]
+# CMD ["ng", "serve", "--disable-host-check"]
+CMD ng serve --disable-host-check
