@@ -15,4 +15,5 @@ FROM node:14-alpine
 WORKDIR /app
 COPY --from=build /app /app
 RUN npm install -g @angular/cli
+EXPOSE 4200
 CMD ["ng", "serve"]
