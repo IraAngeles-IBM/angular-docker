@@ -1,4 +1,4 @@
-# angular-docker
+# Dockerized Sample Angular Project
 
 This is the sample Angular project from [Angular website](https://angular.io/guide/example-apps-list).
 
