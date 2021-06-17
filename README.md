@@ -4,9 +4,9 @@ This is the sample Angular project from [Angular website](https://angular.io/gui
 
 Link to download the original file [here](https://angular.io/generated/zips/getting-started/getting-started.zip).
 
-For production deployment use NGINX server.
+For production deployment use NGINX or other production ready HTTP server.
 
-For development environment this is the sample Dockerfile using `ng serve`.  This is using multi stage Dockerfile for build and deployment image.
+This is sample Dockerfile for development environment using `ng serve`.  This is using multi stage Dockerfile for build and deployment image.
 
 ```Dockerfile
 # This deployment is only for dev
@@ -15,7 +15,7 @@ For development environment this is the sample Dockerfile using `ng serve`.  Thi
 FROM node:14-alpine AS build
 WORKDIR /app
 COPY . .
-COPY package.json package-lock.json ./
+#COPY package.json package-lock.json ./
 RUN npm update
 RUN npm install
 RUN npm install -g @angular/cli
